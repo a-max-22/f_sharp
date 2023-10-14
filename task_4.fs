@@ -14,6 +14,5 @@ let rec sum = function
 // 7.1.3
 let rec sum2 = function 
     | (m,0) -> m 
-    | (m,n) when m >= 0 && n >= 0 -> m + n + sum2(m, n - 1)
+    | (m,n) when n >= 0 -> m + n + sum2(m, n - 1)
     | _ -> 0
-    
