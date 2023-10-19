@@ -1,10 +1,12 @@
 // 16.1
-let notDivisible (n,m) = not ( (m % n) = 0 )  
+let notDivisible (n,m) =  ( (m % n) = 0 )  
+
+let divisible (n,m) = not ( (m % n) = 0 )  
 
 let rec checkAllDivisors (currentDivisor, n) =  
     match currentDivisor with
-        | 2 -> notDivisible (2, n)
-        | currentDivisor -> notDivisible (currentDivisor, n) && checkAllDivisors(currentDivisor - 1, n)      
+        | 2 -> divisible (2, n)
+        | currentDivisor -> divisible (currentDivisor, n) && checkAllDivisors(currentDivisor - 1, n)      
 
 // 16.2
 let  prime n = 
