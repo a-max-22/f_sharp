@@ -16,5 +16,5 @@ let rec isIthChar(str, index, char) =
 let rec occFromIth(str, index, char) = 
     match (String.length str - index) with
         | 0 -> 0
-        | n when (n > 0) && (n < String.length str) -> System.Convert.ToInt32(str.[index] = char) + occFromIth(str, index + 1, char)
+        | n when (n > 0) && (n <= String.length str) -> System.Convert.ToInt32(str.[index] = char) + occFromIth(str, index + 1, char)
         | _ -> 0
