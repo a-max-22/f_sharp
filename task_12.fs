@@ -16,5 +16,5 @@ let rec evenn n =
     let rec pass1 (n,i) =
         match i with
             | 0 -> []
-            | i -> (n - i + 2) :: pass1(n, i - 2)
+            | i -> (n - i) :: pass1(n, i - 2)
     pass1 (2*n, 2*n)
