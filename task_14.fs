@@ -48,7 +48,7 @@ let rec minus (xs1, xs2) =
 
 
 // 40.3.1
-let rec smallest1 xs =
+let rec smallest xs =
     let rec get_smallest (list, cur_smallest) = 
         match list with 
             | head::tail -> if (Option.get cur_smallest ) > head then get_smallest(tail, Some head) else get_smallest(tail, cur_smallest)  
@@ -70,7 +70,7 @@ let rec sort xs =
     let rec sub_sort (xs,sorted) =
         match xs with
             | head::tail ->                    
-                    let cur_smallest = smallest1 xs
+                    let cur_smallest = smallest xs
                     if cur_smallest.IsSome then 
                         sub_sort(delete (cur_smallest.Value, xs), sorted @ [cur_smallest.Value])
                     else
