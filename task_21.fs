@@ -1,3 +1,10 @@
+
+let rec fact = function 
+        | 0 -> 1
+        | n when n > 0 ->  n * (fact (n-1))
+        | _ -> 0
+
+
 // 50.2.1
 let fac_seq = seq {
     for i in Seq.initInfinite  id do
